@@ -1,0 +1,213 @@
+---
+title: "Client Report - [Project 00]"
+subtitle: "Course DS 250"
+author: "[Dillon Guthrie]"
+format:
+  html:
+    self-contained: true
+    page-layout: full
+    title-block-banner: true
+    toc: true
+    toc-depth: 3
+    toc-location: body
+    number-sections: false
+    html-math-method: katex
+    code-fold: true
+    code-summary: "Show the code"
+    code-overflow: wrap
+    code-copy: hover
+    code-tools:
+        source: false
+        toggle: true
+        caption: See code
+execute: 
+  warning: false
+    
+---
+
+```{python}
+#| label: libraries
+#| include: false
+import pandas as pd
+import numpy as np
+import plotly.express as px
+```
+
+
+## Elevator pitch
+
+_paste your elevator pitch here_
+_A SHORT (4-5 SENTENCES) believe I should get a five out of five points. since I wrote most of my code and only needed help with that of importing plotly.express as px. This is the only code I needed help with going to the tutoring lab.Otherwise did the code by myself and feel confident in that of writing python code.
+
+```{python}
+#| label: project-data
+#| code-summary: Read and format project data
+
+# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html
+
+# Include and execute your code here
+df = pd.read_csv("https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv")
+```
+
+__Highlight the Questions and Tasks__
+
+## QUESTION|TASK 1
+
+__COPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE__
+
+_type your results and analysis here_
+
+```{python}
+#| label: Q1
+#| code-summary: Read and format data
+# Include and execute your code here
+#%%
+import pandas as pd
+import plotly.express as px
+
+
+
+
+
+
+```
+
+_include figures in chunks and discuss your findings in the figure._
+
+```{python}
+#| label: Q1-chart
+#| code-summary: plot example
+#| fig-cap: "My useless chart"
+#| fig-align: center
+# Include and execute your code here
+chart = px.bar(df.head(200),
+    x="name", 
+    y="AK"
+)
+chart.show()
+```
+
+
+```{python}
+#| label: Q1-table
+#| code-summary: table example
+#| tbl-cap: "Not much of a table"
+#| tbl-cap-location: top
+# Include and execute your code here
+mydat = (df.head(1000)
+    .groupby('year')
+    .sum()
+    .reset_index()
+    .tail(10)
+    .filter(["year", "AK","AR"])
+)
+display(mydat)
+
+```
+
+
+## QUESTION|TASK 2
+
+__COPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE__
+
+My Results that I find is that Just like that of sql data science is that of the same thing. data frame must be called and taking notes pays off in the classroom and homework. Classifying functions with sqare brackets as that of functions and all was new to me. such as df ['year'] and etc but has been more easier in learning of python with that and using the print statement. I am loving taking this class more often since the assignment was not that difficult. #Side note didn't know I needed that of other plotly.express as px and only missed a few lines of code npw that it does work.
+
+```{python}
+#| label: Q2
+#| code-summary: Read and format data
+# Include and execute your code here
+#%%
+df = pd.read_csv('mpg.csv')
+
+```
+
+_include figures in chunks and discuss your findings in the figure._
+
+```{python}
+#%%
+df['year']
+df['class']
+df['manufacturer']
+df['cyl']
+df['trans']
+
+(df['cty'].mean())
+(df['displ'].mean())
+m = df['cty'].mean()
+print(df[['cty', 'hwy']].sum())
+print(df[['cty', 'hwy']])
+print(f'The mean for CTY is {m}')
+print('Model: Ranger')
+print('year: 1999')
+print('manufacturer:Ford')
+print('trans: auto')
+print('cty: San Diego')
+print('Hwy: I - 10')
+px.scatter(df,x = 'displ', y = 'hwy')
+```
+
+
+```{python}
+#| label: Q2-table
+#| code-summary: table example
+#| tbl-cap: "Not much of a table"
+#| tbl-cap-location: top
+# Include and execute your code here
+# mydat = df.head(1000)\
+#     .groupby('year')\
+#     .sum()\
+#     .reset_index()\
+#     .tail(10)\
+#     .filter(["year", "AK","AR"])
+
+# display(mydat)
+
+```
+
+
+## QUESTION|TASK 3
+
+__COPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE__
+
+_type your results and analysis here_
+
+```{python}
+#| label: Q3
+#| code-summary: Read and format data
+# Include and execute your code here
+
+
+```
+
+_include figures in chunks and discuss your findings in the figure._
+
+```{python}
+#| label: Q3-chart
+#| code-summary: plot example
+#| fig-cap: "My useless chart"
+#| fig-align: center
+# Include and execute your code here
+# chart = px.bar(df.head(200),
+#     x="name", 
+#     y="AK"
+# )
+# chart.show()
+```
+
+
+```{python}
+#| label: Q3-table
+#| code-summary: table example
+#| tbl-cap: "Not much of a table"
+#| tbl-cap-location: top
+# Include and execute your code here
+# mydat = df.head(1000)\
+#     .groupby('year')\
+#     .sum()\
+#     .reset_index()\
+#     .tail(10)\
+#     .filter(["year", "AK","AR"])
+
+# display(mydat)
+
+```
